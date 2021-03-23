@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
-import {NavLink} from "react-router-dom";
+import {NavLink,HashRouter, Route} from "react-router-dom";
 import imgSrc from "./image/me_avater.JPG";
 
 
@@ -51,6 +51,7 @@ function NavBar(){
     };
 
     return (
+        <HashRouter basename='/personal_website'>
         <div className={classes.root}>
         <AppBar position="static">
             <Toolbar>
@@ -63,7 +64,7 @@ function NavBar(){
             </Typography>
             <button onClick={handleClick}>addCnt</button>
             <nav className={classes.toolbarTitle}>
-                    <NavLink exact to="/chat">
+                    <NavLink to="/chat">
                         聊天室
                     </NavLink>
                 </nav>
@@ -71,6 +72,7 @@ function NavBar(){
             </Toolbar>
         </AppBar>
         </div>
+        </HashRouter>
     );
 };
 export default NavBar;
