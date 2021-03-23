@@ -7,7 +7,7 @@ import {Switch, Route, HashRouter} from "react-router-dom";
 
 function Router() {
     return (
-      <HashRouter basename="/">
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" component={HomePage}/>
           <Route exact path="/chat" component={ChatPage}/>

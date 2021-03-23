@@ -51,7 +51,7 @@ function NavBar(){
     };
 
     return (
-        <HashRouter basename='/'>
+        <HashRouter basename={process.env.PUBLIC_URL}>
         <div className={classes.root}>
         <AppBar position="static">
             <Toolbar>
