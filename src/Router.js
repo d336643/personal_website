@@ -1,18 +1,18 @@
 import React from "react"
 import HomePage from "./HomePage";
 import ChatPage from "./ChatPage";
-import {Switch, Route, HashRouter} from "react-router-dom";
+import {Switch, Route, BrowserRouter} from "react-router-dom";
 
 
 
 function Router() {
     return (
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" component={HomePage}/>
           <Route exact path="/chat" component={ChatPage}/>
         </Switch>
-      </HashRouter>
+      </BrowserRouter>
     )
   }
   
