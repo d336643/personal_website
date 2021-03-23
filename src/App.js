@@ -2,7 +2,6 @@ import React from 'react';
 import Router from './Router';
 import Navbar from './NavBar';
 import {makeStyles} from "@material-ui/core";
-import {HashRouter} from "react-router-dom";
 
 
 
@@ -23,14 +22,13 @@ const useStyle = makeStyles(theme => ({
 function App() {
   const classes = useStyle();
   return (
-    <div className={classes.root}>
+    <div className={classecs.root}>
         <Navbar/>
         <div className={classes.content}>
             <Router className={classes.root}/>
         </div>
     </div>
-  );
-  
+  ); 
 }
 
 export default App;
