@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Router from './Router';
 import Navbar from './NavBar';
-import {makeStyles, CssBaseline, List} from "@material-ui/core";
+import {makeStyles} from "@material-ui/core";
+import {BrowserRouter} from "react-router-dom";
+
 
 
 const useStyle = makeStyles(theme => ({
@@ -24,7 +26,9 @@ function App() {
     <div className={classes.root}>
       <Navbar/>
       <div className={classes.content}>
-        <Router className={classes.root}/>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Router className={classes.root}/>
+        </BrowserRouter>
       </div>
       
     </div>
