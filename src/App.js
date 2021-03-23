@@ -2,7 +2,6 @@ import React from 'react';
 import Router from './Router';
 import Navbar from './NavBar';
 import {makeStyles} from "@material-ui/core";
-import {BrowserRouter} from "react-router-dom";
 
 
 
@@ -26,9 +25,7 @@ function App() {
     <div className={classes.root}>
       <Navbar/>
       <div className={classes.content}>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Router className={classes.root}/>
-        </BrowserRouter>
       </div>
       
     </div>
