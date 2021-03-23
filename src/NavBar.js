@@ -51,11 +51,11 @@ function NavBar(){
     };
 
     return (
-        <HashRouter basename='/personal_website'>
+        <HashRouter basename='/'>
         <div className={classes.root}>
         <AppBar position="static">
             <Toolbar>
-            <Button href={"/"}><Avatar src={imgSrc} className={classes.menuButton}/></Button>
+            <Button href="#"><Avatar src={imgSrc} className={classes.menuButton}/></Button>
             <Typography variant="h6" className={classes.title}>
                 網路攻防實習
             </Typography>
